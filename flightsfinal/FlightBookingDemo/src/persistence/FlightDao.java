@@ -13,4 +13,6 @@ import entity.Bookings;
 import entity.Flights;
 import entity.UserDetails;
 import entity.TravelItenary;
-public interface FlightDao {}
+public interface FlightDao {
+	public ArrayList<TravelItenary> getFlightDetails(String source, String destination, String dateOfTravel);
+}

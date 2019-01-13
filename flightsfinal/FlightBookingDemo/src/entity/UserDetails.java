@@ -1,5 +1,6 @@
 package entity;
 
+import service.RandomNumberGeneration;
 
 public class UserDetails {
 
@@ -7,13 +8,13 @@ public class UserDetails {
     private int userId;
 	private String name;
 	private String emailId;
-	private int phoneNo;
+	private String phoneNo;
 	
 	public UserDetails(){
 		
 	}
 	
-	public UserDetails(int userId, String name,String emailId, int phoneNo) {
+	public UserDetails(int userId, String name,String emailId, String phoneNo) {
 		super();
 		this.userId = userId;
 		this.name = name;
@@ -49,17 +50,25 @@ public class UserDetails {
 		this.emailId = emailId;
 	}
 
-	public int getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(int phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
 	@Override
 	public String toString() {
 		return "Flights [userId=" + userId + ", name=" + name + ", emailId=" + emailId + ", phoneNo=" + phoneNo + "]";
+	}
+
+	public void input(String name, String email, String phone, int userId) {
+		// TODO Auto-generated method stub
+		this.setName(name);
+		this.setEmailId(email);
+		this.setPhoneNo(phone);
+		this.setUserId(userId);
 	}
 	
 }
